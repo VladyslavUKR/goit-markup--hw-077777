@@ -67,18 +67,17 @@ body {
   text-decoration: none;
 }
 /* ================HEADER================ */
-.header {
-  /* padding: 24px 0; */
+
+.header__border {
   border-bottom: 1px solid #ececec;
 }
-.page-header-container {
+
+.header__container {
   display: flex;
   align-items: center;
 }
 
 .logotype {
-  margin-right: 93px;
-
   font-family: var(--secondary-page-font);
   font-weight: 700;
   font-size: 26px;
@@ -89,11 +88,16 @@ body {
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-span {
+
+.page-header__logo {
+  margin-right: 93px;
+}
+
+.logotype_black {
   color: #000;
 }
 
-.main-nav {
+.page-nav {
   display: flex;
   align-items: center;
 }
@@ -102,26 +106,8 @@ span {
   display: flex;
   align-items: center;
 }
-.menu-item:not(:last-child) {
-  margin-right: 50px;
-}
 
-.menu-item {
-  position: relative;
-  padding: 32px 0;
-}
-
-.contacts-list {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.contacts-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.menu-link {
+.menu__link {
   transition: color var(--trans-accent);
   font-weight: 500;
   line-height: 1.15;
@@ -130,16 +116,16 @@ span {
   color: var(--primary-page-color);
 }
 
-.menu-link:hover,
-.menu-link:focus {
+.menu__link:hover,
+.menu__link:focus {
   color: var(--accent-page-color);
 }
 
-.menu-link.link.current {
+.menu__link.link.menu__link_current {
   color: var(--accent-page-color);
 }
 
-.menu-link.link.current::before {
+.menu__link.link.menu__link_current::before {
   content: '';
   position: absolute;
   display: block;
@@ -153,6 +139,28 @@ span {
 
   border-radius: 2px;
   background-color: var(--accent-page-color);
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu__item {
+  position: relative;
+  padding: 32px 0;
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header__list {
+  margin-left: auto;
 }
 
 .contacts-link {
@@ -172,8 +180,8 @@ span {
   color: #2196f3;
 }
 
-.envelope-icon,
-.smartphone-icon {
+.contacts-link__envelope-icon,
+.contacts-link__smartphone-icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -488,7 +496,7 @@ span {
   transition: color var(--trans-accent), background var(--trans-accent),
     box-shadow var(--trans-accent);
 }
-.page-btn.current {
+.page-btn.menu__link_current {
   background-color: var(--accent-page-color);
   color: var(--secondary-accent-page-color);
 }
