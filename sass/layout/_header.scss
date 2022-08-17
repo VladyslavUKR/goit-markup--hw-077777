@@ -44,11 +44,11 @@
   letter-spacing: 0.02em;
 
   color: var(--primary-page-color);
-}
 
-.menu__link:hover,
-.menu__link:focus {
-  color: var(--accent-page-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-page-color);
+  }
 }
 
 .menu__link.link.menu__link_current {
@@ -71,13 +71,13 @@
   background-color: var(--accent-page-color);
 }
 
-.menu__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .menu__item {
   position: relative;
   padding: 32px 0;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .contacts-list {
@@ -103,11 +103,11 @@
   font-weight: 500;
   line-height: 1.71;
   color: var(--secondary-page-color);
-}
 
-.contacts-link:hover,
-.contacts-link:focus {
-  color: #2196f3;
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
 }
 
 .contacts-link__envelope-icon,

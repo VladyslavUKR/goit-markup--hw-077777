@@ -41,10 +41,11 @@
   letter-spacing: 0.06em;
   cursor: pointer;
   color: var(--secondary-accent-page-color);
-}
-.model-btn:hover,
-.model-btn:focus {
-  background: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
 }

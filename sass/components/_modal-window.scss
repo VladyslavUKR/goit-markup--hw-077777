@@ -33,13 +33,13 @@
 
 .modal-close-btn-icon {
   transition: fill var(--trans-accent);
-}
 
-.modal-close-btn:focus .modal-close-btn-icon {
-  fill: var(--accent-page-color);
-}
+  .modal-close-btn:focus & {
+    fill: var(--accent-page-color);
+  }
 
-.modal-close-btn-icon:hover {
-  fill: var(--accent-page-color);
-  background-color: #fff;
+  &:hover {
+    fill: var(--accent-page-color);
+    background-color: #fff;
+  }
 }

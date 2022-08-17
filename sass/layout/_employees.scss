@@ -3,7 +3,6 @@
 }
 
 .section-title {
-  /* padding-top: 94px; */
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
@@ -23,7 +22,6 @@
 /* рамка для працівників */
 .border {
   background: #ffffff;
-  /* material shadow v1 */
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -67,10 +65,10 @@
   border-radius: 50%;
 
   transition: background-color var(--trans-accent), fill var(--trans-accent);
-}
 
-.social-link-employees:hover,
-.social-link-employees:focus {
-  background-color: #2196f3;
-  fill: #fff;
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+    fill: #fff;
+  }
 }

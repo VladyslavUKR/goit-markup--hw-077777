@@ -26,13 +26,15 @@
   border-radius: 4px;
 
   transition: fill var(--trans-accent), border-color var(--trans-accent);
+
+  &:focus,
+  &:hover {
+    border-color: var(--accent-page-color);
+    fill: #2196f3;
+  }
 }
+
 .customers-item {
   width: 170px;
   height: 92px;
-}
-.customers-link:focus,
-.customers-link:hover {
-  border-color: var(--accent-page-color);
-  fill: #2196f3;
 }

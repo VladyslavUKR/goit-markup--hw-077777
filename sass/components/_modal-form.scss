@@ -49,15 +49,11 @@
   border-radius: 4px;
 
   transition: border var(--trans-accent);
-}
 
-.modal-form-input:focus {
-  outline: none;
-  border: 1px solid var(--accent-page-color);
-}
-
-.modal-form-input:focus + .icon-form {
-  fill: var(--accent-page-color);
+  &:focus {
+    outline: none;
+    border: 1px solid var(--accent-page-color);
+  }
 }
 
 .icon-form {
@@ -66,6 +62,10 @@
   top: 0;
   left: 12px;
   transition: fill var(--trans-accent);
+
+  .modal-form-input:focus + & {
+    fill: var(--accent-page-color);
+  }
 }
 
 .modal-form-field-message {
@@ -83,15 +83,14 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border var(--trans-accent);
-}
 
-.modal-form-message::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.modal-form-message:focus {
-  outline: none;
-  border: 1px solid var(--accent-page-color);
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid var(--accent-page-color);
+  }
 }
 
 .modal-form-check-desc {
@@ -106,33 +105,33 @@
   color: #757575;
   color: var(--secondary-page-color);
   transition: background-image 2s linear;
-}
 
-.modal-form-check:checked + .modal-form-check-desc::before {
-  background-color: var(--accent-page-color);
-  border: transparent;
-  background-image: url(../images/check-mark.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  &::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
 
-.modal-form-check:focus + .modal-form-check-desc::before {
-  outline: 1px solid var(--accent-page-color);
-  border: none;
-}
+    margin-right: 7px;
+    cursor: pointer;
 
-.modal-form-check-desc::before {
-  content: '';
-  display: block;
-  width: 15px;
-  height: 15px;
+    border: solid 2px var(--primary-page-color);
+    border-radius: 2px;
+    transition: background-color var(--trans-accent);
+  }
 
-  margin-right: 7px;
-  cursor: pointer;
+  .modal-form-check:checked + &::before {
+    background-color: var(--accent-page-color);
+    border: transparent;
+    background-image: url(../images/check-mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-  border: solid 2px var(--primary-page-color);
-  border-radius: 2px;
-  transition: background-color var(--trans-accent);
+  .modal-form-check:focus + &::before {
+    outline: 1px solid var(--accent-page-color);
+    border: none;
+  }
 }
 
 .modal-form-check-desc-link {
@@ -163,11 +162,11 @@
   border-radius: 4px;
 
   transition: background var(--trans-accent), box-shadow var(--trans-accent);
-}
 
-.modal-form-btn:focus,
-.modal-form-btn:hover {
-  background: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  &:focus,
+  &:hover {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
 }

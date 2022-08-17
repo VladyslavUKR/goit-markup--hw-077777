@@ -37,20 +37,22 @@
 
   transition: color var(--trans-accent), background var(--trans-accent),
     box-shadow var(--trans-accent);
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-accent-page-color);
+    background: #2196f3;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    cursor: pointer;
+  }
 }
+
 .btn-list__button.btn-list_active {
   background-color: var(--accent-page-color);
   color: var(--secondary-accent-page-color);
-}
-.btn-list__button:hover,
-.btn-list__button:focus {
-  color: var(--secondary-accent-page-color);
-  background: #2196f3;
-
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .portfolio-item__container {
@@ -74,13 +76,14 @@
 .portfolio-item__link {
   display: block;
   transition: box-shadow var(--trans-accent);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
-.portfolio-item__link:hover,
-.portfolio-item__link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 .portfolio-item__title {
   font-size: 18px;
   line-height: 2;
@@ -117,9 +120,9 @@
   color: var(--secondary-accent-page-color);
 
   background-color: rgba(33, 150, 243, 0.9);
-}
 
-.portfolio-item__link:hover .portfolio-item__overlay,
-.portfolio-item__link:focus .portfolio-item__overlay {
-  transform: translate(0, 0);
+  .portfolio-item__link:hover &,
+  .portfolio-item__link:focus & {
+    transform: translate(0, 0);
+  }
 }
