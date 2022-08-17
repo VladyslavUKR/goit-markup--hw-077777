@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -362,10 +362,12 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="container footer__menu">
-        <div>
-          <a class="footer-logo link" href="./index.html" lang="en">Web<span>Studio</span></a>
-          <address class="address">
+      <div class="footer__menu container">
+        <div class="footer__inform">
+          <a class="logotype link" href="./index.html" lang="en"
+            >Web<span class="logotype_white">Studio</span></a
+          >
+          <address class="address footer-address">
             <ul class="address__list">
               <li class="footer__item list">
                 <a
@@ -387,9 +389,10 @@
           </address>
         </div>
 
-        <div class="media-footer">
+        <!-- media footer -->
+        <div class="invitation">
           <h3 class="invitation__title">присоединяйтесь</h3>
-          <ul class="social-link list">
+          <ul class="soc-list list">
             <li class="soc-list__item">
               <a href="" class="soc-list__link">
                 <svg class="join-icon" width="20" height="20">
@@ -420,6 +423,7 @@
             </li>
           </ul>
         </div>
+
         <form class="subscription">
           <p class="subscription__text">Подпишитесь на рассылку</p>
           <input
